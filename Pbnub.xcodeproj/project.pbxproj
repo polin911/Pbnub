@@ -13,6 +13,14 @@
 		362DF7221F6564D800144163 /* Pbnub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 362DF7201F6564D800144163 /* Pbnub.xcdatamodeld */; };
 		362DF7241F6564D800144163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362DF7231F6564D800144163 /* Assets.xcassets */; };
 		362DF7271F6564D800144163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362DF7251F6564D800144163 /* LaunchScreen.storyboard */; };
+		362DF72F1F666E2800144163 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DF72E1F666E2800144163 /* MainVC.swift */; };
+		362DF7311F6675BA00144163 /* PubNubPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DF7301F6675BA00144163 /* PubNubPublisher.swift */; };
+		362DF7331F66799000144163 /* PubNubSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DF7321F66799000144163 /* PubNubSubscriber.swift */; };
+		362DF7351F67C79700144163 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DF7341F67C79700144163 /* ChatModel.swift */; };
+		362DF7371F67F61D00144163 /* DownloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DF7361F67F61D00144163 /* DownloadData.swift */; };
+		362DF7391F680F6B00144163 /* modelTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DF7381F680F6B00144163 /* modelTry.swift */; };
+		362DF73B1F6911D000144163 /* CellChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DF73A1F6911D000144163 /* CellChat.swift */; };
+		BD6DB724A4BA420DCE8AF7FC /* Pods_Pbnub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA1460C37596DCADE0458A /* Pods_Pbnub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,16 @@
 		362DF7231F6564D800144163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		362DF7261F6564D800144163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		362DF7281F6564D800144163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		362DF72E1F666E2800144163 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		362DF7301F6675BA00144163 /* PubNubPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubNubPublisher.swift; sourceTree = "<group>"; };
+		362DF7321F66799000144163 /* PubNubSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubNubSubscriber.swift; sourceTree = "<group>"; };
+		362DF7341F67C79700144163 /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		362DF7361F67F61D00144163 /* DownloadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadData.swift; sourceTree = "<group>"; };
+		362DF7381F680F6B00144163 /* modelTry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelTry.swift; sourceTree = "<group>"; };
+		362DF73A1F6911D000144163 /* CellChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellChat.swift; sourceTree = "<group>"; };
+		A9194C4BABC80C4C2152A721 /* Pods-Pbnub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pbnub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pbnub/Pods-Pbnub.release.xcconfig"; sourceTree = "<group>"; };
+		BADA1460C37596DCADE0458A /* Pods_Pbnub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pbnub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8513B5EB0B94FAB2EE648BD /* Pods-Pbnub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pbnub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pbnub/Pods-Pbnub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6DB724A4BA420DCE8AF7FC /* Pods_Pbnub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,8 @@
 			children = (
 				362DF7181F6564D800144163 /* Pbnub */,
 				362DF7171F6564D800144163 /* Products */,
+				9D30095B150ABCE030CD8333 /* Pods */,
+				6792B49925C8F026F3178691 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +84,32 @@
 				362DF7251F6564D800144163 /* LaunchScreen.storyboard */,
 				362DF7281F6564D800144163 /* Info.plist */,
 				362DF7201F6564D800144163 /* Pbnub.xcdatamodeld */,
+				362DF72E1F666E2800144163 /* MainVC.swift */,
+				362DF7301F6675BA00144163 /* PubNubPublisher.swift */,
+				362DF7321F66799000144163 /* PubNubSubscriber.swift */,
+				362DF7341F67C79700144163 /* ChatModel.swift */,
+				362DF7361F67F61D00144163 /* DownloadData.swift */,
+				362DF7381F680F6B00144163 /* modelTry.swift */,
+				362DF73A1F6911D000144163 /* CellChat.swift */,
 			);
 			path = Pbnub;
+			sourceTree = "<group>";
+		};
+		6792B49925C8F026F3178691 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BADA1460C37596DCADE0458A /* Pods_Pbnub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D30095B150ABCE030CD8333 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8513B5EB0B94FAB2EE648BD /* Pods-Pbnub.debug.xcconfig */,
+				A9194C4BABC80C4C2152A721 /* Pods-Pbnub.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 362DF72B1F6564D800144163 /* Build configuration list for PBXNativeTarget "Pbnub" */;
 			buildPhases = (
+				B5429CC9DEA6E5EBDB268F16 /* [CP] Check Pods Manifest.lock */,
 				362DF7121F6564D800144163 /* Sources */,
 				362DF7131F6564D800144163 /* Frameworks */,
 				362DF7141F6564D800144163 /* Resources */,
+				D9E5A97A346D16A3B4101202 /* [CP] Embed Pods Frameworks */,
+				E1DCF8176BC47BEC25D38688 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,14 +183,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5429CC9DEA6E5EBDB268F16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9E5A97A346D16A3B4101202 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pbnub/Pods-Pbnub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1DCF8176BC47BEC25D38688 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pbnub/Pods-Pbnub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		362DF7121F6564D800144163 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				362DF71C1F6564D800144163 /* ViewController.swift in Sources */,
+				362DF7331F66799000144163 /* PubNubSubscriber.swift in Sources */,
+				362DF72F1F666E2800144163 /* MainVC.swift in Sources */,
+				362DF7351F67C79700144163 /* ChatModel.swift in Sources */,
+				362DF7311F6675BA00144163 /* PubNubPublisher.swift in Sources */,
 				362DF7221F6564D800144163 /* Pbnub.xcdatamodeld in Sources */,
 				362DF71A1F6564D800144163 /* AppDelegate.swift in Sources */,
+				362DF7391F680F6B00144163 /* modelTry.swift in Sources */,
+				362DF7371F67F61D00144163 /* DownloadData.swift in Sources */,
+				362DF73B1F6911D000144163 /* CellChat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +368,7 @@
 		};
 		362DF72C1F6564D800144163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8513B5EB0B94FAB2EE648BD /* Pods-Pbnub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CBVCE8QCE8;
@@ -278,6 +382,7 @@
 		};
 		362DF72D1F6564D800144163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9194C4BABC80C4C2152A721 /* Pods-Pbnub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CBVCE8QCE8;
@@ -308,6 +413,7 @@
 				362DF72D1F6564D800144163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
