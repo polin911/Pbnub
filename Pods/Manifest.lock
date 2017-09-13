@@ -1,0 +1,17 @@
+PODS:
+  - PubNub (4.5.5):
+    - PubNub/Core (= 4.5.5)
+  - PubNub/Core (4.5.5)
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - PubNub (~> 4)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  PubNub: 519594dfe84662686818591179470ff87a30a224
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: 016604cef2665cc2e560707aee261d6bb3d6c023
+
+COCOAPODS: 1.2.0
