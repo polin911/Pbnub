@@ -36,7 +36,25 @@ struct ChatModel {
         self.channelName = channelName
     }
     
-    
-    
-    
 }
+
+    
+
+
+
+class ChatModel2: NSObject {
+    
+        var name: String
+        var text: String
+        var time: String
+      var sender: String
+        var type: String
+        
+        init(name: String, text: String, time: String, sender: String, type: String) {
+            self.name = name
+            self.text = text
+            self.time = time
+            self.sender = sender
+            self.type = type
+        }
+    }

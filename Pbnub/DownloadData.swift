@@ -43,9 +43,11 @@ class DownloadData {
                 print("error jsonObject")
                 return
             }
-        for jsonObject in
+//        for jsonObject in
             
         
+    }
+        return []
     }
     
     
@@ -117,3 +119,4 @@ class DownloadData {
 //    }
     
 }
+

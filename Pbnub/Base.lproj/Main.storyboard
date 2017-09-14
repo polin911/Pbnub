@@ -67,13 +67,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytv-NU-9Iy">
+                                <rect key="frame" x="164" y="597" width="46" height="30"/>
+                                <state key="normal" title="reload"/>
+                                <connections>
+                                    <action selector="uploadcheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ecC-Le-ZfE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ytv-NU-9Iy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="8MZ-6v-jVX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ytv-NU-9Iy" secondAttribute="trailing" constant="149" id="Ac4-NY-qOs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ytv-NU-9Iy" secondAttribute="bottom" constant="40" id="G8Z-IX-f71"/>
                             <constraint firstItem="qFJ-md-cXg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hvm-kU-7qV"/>
                             <constraint firstItem="qFJ-md-cXg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MDI-Ny-5Y1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qFJ-md-cXg" secondAttribute="bottom" constant="100" id="TZc-r5-LaB"/>
                             <constraint firstAttribute="trailing" secondItem="qFJ-md-cXg" secondAttribute="trailing" id="fec-sC-Pa4"/>
+                            <constraint firstItem="Ytv-NU-9Iy" firstAttribute="top" secondItem="qFJ-md-cXg" secondAttribute="bottom" constant="30" id="wQ1-7g-tJU"/>
                         </constraints>
                     </view>
                     <connections>

@@ -23,7 +23,7 @@ class MainVC: UIViewController {
     
     
     var dataDownload: DownloadData!
-    var chatModel   : [ChatModel]!
+    var chatModel : [ChatModel2]!
     
     //Publick message!
     var pubNubPublisher = PubNubPublisher(publishChannel: "antichat_hackathon")
@@ -36,20 +36,23 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         
         
-       // labelTxt.text = modelTry.txtMessage
-//        dataDownload.chatUpload(succes: { (chat) in
-//            print(chat)
-//        }) { (error) in
-//            print(error)
+
+//        exampleClient.historyForChannel("antichat_hackathon", start: nil, end: nil) { (result, status) in
+//            chatMessageArray = self.parseJson(result?.data.messages as AnyObject)
+
+//          print("\(result?.data.messages)")
 //        }
-        exampleClient.historyForChannel("antichat_hackathon", start: nil, end: nil) { (result, status) in
-            
-            print("\(result)")
-        }
+        
+        ///////////////////
+        
+        
+        
         
         func updateView() {
             tableViewChat.delegate   = self
             tableViewChat.dataSource = self
+            tableViewChat.reloadData()
+            updateHistory()
         }
         
         //exampleClient.history()
@@ -59,7 +62,53 @@ class MainVC: UIViewController {
         //Subscribe
     
     }
-
+    ////////////////////MARK: Update
+    
+    var chatMessageArray:[ChatModel2] = []
+    var usersArray:[String] = []
+    
+    func updateHistory(){
+        
+        let appDel = UIApplication.shared.delegate! as! AppDelegate
+        
+        appDel.client.historyForChannel("antichat_hackathon", start: nil, end: nil, includeTimeToken: true, withCompletion: { (result, status) -> Void in
+            self.chatMessageArray = self.parseJson(result!.data.messages as AnyObject)
+            self.tableViewChat.reloadData()
+            
+            
+        })
+    }
+    
+    func parseJson(_ anyObj:AnyObject) -> Array<ChatModel2>{
+        
+        var list:Array<ChatModel2> = []
+        
+        if  anyObj is Array<AnyObject> {
+            
+            for jsonMsg in anyObj as! Array<AnyObject>{
+                var json = jsonMsg["message"] as! NSDictionary
+                if(json["type"] as AnyObject? as? String != "Chat"){ continue }
+                var nameJson = (json["name"] as AnyObject? as? String) ?? "" // to get rid of null
+                var textJson  =  (json["text"]  as AnyObject? as? String) ?? ""
+                var timeJson  =  (json["time"]  as AnyObject? as? String) ?? ""
+                var senderJson  =  (json["sender"]  as AnyObject? as? String) ?? ""
+                var typeJson  =  (json["type"]  as AnyObject? as? String) ?? ""
+                
+                list.append(ChatModel2(name: nameJson, text: textJson, time: timeJson, sender: senderJson, type: typeJson))
+            }
+            self.tableViewChat.reloadData()
+            
+            
+        }
+        
+        return list
+        
+    }
+    
+    @IBAction func uploadcheck(_ sender: Any) {
+        tableViewChat.reloadData()
+    }
+//////////
    
 
 }
@@ -73,8 +122,8 @@ extension MainVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewChat.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! CellChat
-        cell.chatTxtLbl.text = chatModel[indexPath.row].message
-        cell.nameLbl.text    = chatModel[indexPath.row].userName
+        cell.chatTxtLbl.text = chatModel[indexPath.row].text
+        cell.nameLbl.text    = chatModel[indexPath.row].sender
         
         return cell
     }
